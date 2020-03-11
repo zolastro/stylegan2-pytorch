@@ -31,8 +31,7 @@ def train_from_folder(
         image_size = image_size,
         network_capacity = network_capacity,
         lr = learning_rate,
-        num_workers = num_workers,
-        save_every = save_every
+        num_workers = num_workers
     )
 
     if not new:

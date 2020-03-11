@@ -391,7 +391,7 @@ class StyleGAN2(nn.Module):
         return x
 
 class Trainer():
-    def __init__(self, name, results_dir, models_dir, image_size, network_capacity, batch_size = 4, mixed_prob = 0.9, gradient_accumulate_every=1, lr = 2e-4, num_workers = None, save_every = 1000, *args, **kwargs):
+    def __init__(self, name, results_dir, models_dir, image_size, network_capacity, batch_size = 4, mixed_prob = 0.9, gradient_accumulate_every=1, lr = 2e-4, num_workers = None, *args, **kwargs):
         self.GAN_params = [args, kwargs]
         self.GAN = None
 
@@ -408,7 +408,7 @@ class Trainer():
         self.num_workers = num_workers
         self.mixed_prob = mixed_prob
 
-        self.save_every = save_every
+        self.save_every = 1000
         self.steps = 0
 
         self.av = None
